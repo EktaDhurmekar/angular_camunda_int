@@ -1,0 +1,16 @@
+
+<mat-toolbar color="primary" class="toolbar">
+    <mat-icon>menu</mat-icon> MENU
+</mat-toolbar>
+
+<mat-nav-list class="nav-list">
+    <a mat-list-item routerLink="/create-process" (click)="onSidenavClose()">
+        <mat-icon>create</mat-icon> <span class="nav-caption">Create Process</span>
+    </a>
+    <a mat-list-item routerLink="/tasklist" (click)="onSidenavClose()">
+        <mat-icon> list_alt</mat-icon> <span class="nav-caption">Tasklist</span>   
+    </a>
+    <!-- <a mat-list-item routerLink="" (click)="onSidenavClose()">
+        <mat-icon>account_balance</mat-icon><span class="nav-caption">Account Actions</span>
+    </a> -->
+  </mat-nav-list>

@@ -1,0 +1,34 @@
+<br>
+
+ <mat-card class="crd-task-list">
+   <mat-card-header class="tasklist-card-header">Active Tasks</mat-card-header>
+   <br>
+   <mat-card-content>
+    <table cellpadding="5">
+      <thead class="header-task-list">
+        <tr>
+          <th class="task-list-th">Id</th>
+          <th class="task-list-th">Created On</th>
+          <th class="task-list-th">Name</th>
+          <th class="task-list-th">Complete Task</th>
+          <th class="task-list-th">Delete Task</th>
+        </tr>
+      </thead>
+      <tbody class="body-task-list">
+        <tr *ngFor="let task of currentTaskList">
+          <th>{{task.id}}</th>
+          <th>{{task.created}}</th>
+          <th>{{task.name}}</th>
+          <th class="align-center">
+            <mat-icon *ngIf="task.isActive" class="icon color-green" (click)="complete(task.id)">play_arrow</mat-icon>
+            <span *ngIf="!task.isActive" class="icon color-green"> <mat-icon>done</mat-icon> </span>
+          </th>
+          <th class="align-center"> 
+            <span *ngIf="!task.isActive" class="color-red"> <mat-icon>not_interested</mat-icon> </span>
+            <span *ngIf="task.isActive" class="icon color-red" (click)="delete(task.processDefinitionId)"> <mat-icon>delete_outline</mat-icon> </span>         
+          </th>
+        </tr>
+      </tbody>
+   </table>
+   </mat-card-content>
+</mat-card>

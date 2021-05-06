@@ -1,0 +1,14 @@
+<mat-toolbar color="primary" *ngIf="isAuthenticated">
+    <div class="menu">
+         <button mat-icon-button (click)="onToggleSidenav()">
+            <mat-icon>menu</mat-icon>
+            MENU
+        </button>
+     </div>
+     <div class="logout">
+        <button mat-button (click)="logout()">   
+            <mat-icon>exit_to_app</mat-icon>
+            LOGOUT
+        </button>
+    </div>
+  </mat-toolbar>

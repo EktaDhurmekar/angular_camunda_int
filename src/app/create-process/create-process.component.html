@@ -1,0 +1,117 @@
+<!-- <br> -->
+<!-- <div class="row">
+   <div class="col-8">
+     <label class="btn btn-default p-0">
+       <input type="file" class="btn btn-success btn-sm" (change)="selectFile($event)" />
+     </label>
+   </div>
+ 
+   <div class="col-4">
+     <button class="btn btn-success btn-sm" [disabled]="!selectedFiles" (click)="upload()">
+       Upload
+     </button>
+   </div>
+ </div>
+ 
+ <div *ngIf="currentFile" class="progress my-3">
+   <div
+     class="progress-bar progress-bar-info progress-bar-striped"
+     role="progressbar"
+     attr.aria-valuenow="{{ progress }}"
+     aria-valuemin="0"
+     aria-valuemax="100"
+     [ngStyle]="{ width: progress + '%' }"
+   >
+     {{ progress }}%
+   </div>
+ </div>
+  -->
+ 
+
+ <br>
+
+ <div>
+
+  <alert></alert>
+  <br>
+
+  <mat-card class="create-process-card font">
+
+    <mat-card-header class="create-process-card-header">
+      <mat-card-title> Create  Process</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content class="create-process-card-content">
+     
+      <mat-form-field>
+        <div>
+          <mat-toolbar>
+            <!-- Display files names -->
+            <input matInput  [(ngModel)]="fileAttr"  readonly name="name" />
+            <!-- Browse Button -->
+            <button mat-flat-button color="primary">
+              Browse File  &nbsp;&nbsp;&nbsp;&nbsp;
+            </button>
+          </mat-toolbar>
+          <!-- Fetch selected filed on change -->
+          <input type="file" id="uploadFile"  name="uploadFile"
+          (change)="selectFile($event)" />
+        </div>
+      </mat-form-field>
+      
+      <button  class="btn btn-create-process" [disabled]="!currentFile" (click)="upload()">
+        Create Task
+      </button>
+      
+      <!-- <div *ngIf="currentFile" class="progress my-3">
+        <div
+          class="progress-bar progress-bar-info progress-bar-striped"
+          role="progressbar"
+          attr.aria-valuenow="{{ progress }}"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          [ngStyle]="{ width: progress + '%' }"
+        >
+          {{ progress }}%
+        </div>
+      </div> -->
+
+    </mat-card-content>
+  </mat-card>
+ </div>
+ 
+ <br>
+ <br>
+
+ <mat-card class="crd-process-list">
+  <table cellpadding="5">
+    <thead class="header-process-list">
+      <tr>
+        <th class="process-list-th">Id</th>
+        <th class="process-list-th">Version</th>
+        <th class="process-list-th">Name</th>
+        <th class="process-list-th">Start Process</th>
+        <th class="process-list-th">Delete Process</th>
+      </tr>
+    </thead>
+    <tbody class="body-process-list">
+      <tr *ngFor="let process of processList">
+        <td>{{process.deploymentId}}</td>
+        <td>{{process.version}}</td>
+        <td>{{process.name}}</td>
+        <td class="align-center">
+          <mat-icon *ngIf="!process.isStarted" class="icon color-green" (click)="start(process.deploymentId)">play_arrow</mat-icon>
+          <span *ngIf="process.isStarted" class="icon color-green"> <mat-icon>done</mat-icon> </span>
+        </td>
+        <td class="align-center">
+          <span *ngIf="!process.isStarted"> <mat-icon class="icon color-red" (click)="delete(process.deploymentId)">delete_outline</mat-icon> </span>
+          <span *ngIf="process.isStarted" class="color-red"> <mat-icon>not_interested</mat-icon> </span>
+        </td>
+      </tr>
+    </tbody>
+ </table>
+
+</mat-card>
+
+
+

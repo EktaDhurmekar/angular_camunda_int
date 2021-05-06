@@ -1,0 +1,107 @@
+
+ .mat-form-field {
+  margin: 40px 0;
+  width: 500px !important;
+  width: 100%;
+}
+
+/*
+.mat-toolbar-single-row {
+  height: auto !important;
+  background: transparent;
+}
+
+.mat-toolbar-single-row button {
+  width: 200px;
+}
+
+.mat-form-field {
+  width: 100%;
+} */
+
+.create-process-card {
+  width: 90%;
+  padding: 0px !important;  
+  margin-left: 1%;
+}
+
+.create-process-card-header {
+  background-color: rgb(86, 3, 102);
+  color: white;
+  border-radius: 4px 4px 0 0;
+  padding-top: 1%;
+  mat-card-title {
+    font-weight: 100 !important;
+    margin: 8px 0px !important;
+  }
+}
+
+.create-process-card-content {
+  padding: 16px;
+}
+
+#uploadFile {
+  top: 0px;
+  left: 0px;
+  width: 100%;    
+  z-index: 9;
+  opacity: 0;
+  height: 100%;
+  cursor: pointer;
+  position: absolute;
+}
+
+.progress{
+  width: 50%;
+}
+
+.color-green{
+  color:green
+}
+
+.color-red{
+  color:red
+}
+
+.btn-create-process{
+  margin-left: 4%; 
+  height: 10%;
+  margin-bottom: 0.5%;
+  color: #fff;
+  background-color: #7f088a;
+  border-color: #7f088a;  
+}
+
+
+.crd-process-list{
+  width: 90%;
+  margin-left: 1%;
+}
+
+table {
+  width: 100%;
+}
+
+td{
+  text-align: center
+}
+
+.header-process-list{
+  background-color: #f5f5f5;
+  font-size: large;
+  width: 5%;
+}
+
+.process-list-th{
+  padding-top: 1%;
+  padding-bottom: 1%;
+  padding-left: 2%;
+}
+
+.align-center{
+  text-align: center
+}
+
+.icon{
+  cursor: pointer;
+}

@@ -1,0 +1,43 @@
+<!-- <mat-toolbar *ngIf="isAuthenticated"  class="expanded-toolbar">  
+  
+    <div class="menu-div">
+      <button mat-button (click)="navigate('tasklist')">   
+       <mat-icon>menu</mat-icon> 
+       TASK LIST
+      </button>
+    </div>
+
+    <div class="menu-div">
+      <button mat-button (click)="navigate('create-process')">   
+        <mat-icon>create</mat-icon>
+        DEPLOYMENT
+      </button>
+    </div>
+
+    <div class="logout-div">
+       <button mat-button (click)="logout()">   
+        <mat-icon>exit_to_app</mat-icon>
+        LOGOUT
+      </button>
+    </div>
+  </mat-toolbar>    -->
+
+
+  <mat-sidenav-container>
+    <mat-sidenav #sidenav role="navigation">
+      <app-sidenav (sidenavClose)="sidenav.close()"></app-sidenav>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <app-header (sidenavToggle)="sidenav.toggle()"></app-header>
+      <main>
+        <router-outlet></router-outlet>
+      </main>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
+  <!-- <mat-tab-group>
+    <a [routerLink]="['/create-process']"> <mat-tab label="Create Process"> </mat-tab> </a>
+    <mat-tab label="Complete Task"> Complete Task </mat-tab>
+  </mat-tab-group> -->
+
+<!-- <router-outlet></router-outlet> -->

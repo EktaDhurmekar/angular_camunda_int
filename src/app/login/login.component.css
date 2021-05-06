@@ -1,0 +1,31 @@
+.my-form{
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+   
+  .full-width {
+    width: 100%;
+  }
+
+  .login-card {
+    margin:auto; 
+    width:50%;
+    margin-top: 5%;
+    padding: 0px !important;
+  }
+  
+  .login-card-header {
+    background-color: rgb(126, 7, 150);
+    color: white;
+    border-radius: 4px 4px 0 0;
+    padding-top: 1%;
+    mat-card-title {
+      font-weight: 100 !important;
+      margin: 8px 0px !important;
+    }
+  }
+  
+  .login-card-content {
+    padding: 16px;
+  }
